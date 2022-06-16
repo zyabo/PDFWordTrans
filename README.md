@@ -33,6 +33,7 @@ More smalllll...
 
 3.直接将单词翻译标注在单词下，可以逐步适应纯英文阅读。
 
+
 ### 使用步骤
 #### 0.准备
 申请百度翻译API（标准版，1秒请求一次，永久免费），获取 appid 和 secretKey，并填入py文件中。
@@ -58,6 +59,9 @@ pip install pdfminer
 
 #### 2.运行程序
 python PDFWordTrans.py
+
+文档：我是pdf.pdf
+翻译后的文档：@#@\_我是pdf.pdf
 
 ### 效果
 #### Version 1.0 
