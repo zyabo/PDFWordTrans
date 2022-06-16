@@ -1,42 +1,3 @@
-"""
-思路
-
-翻译难的词汇
-
-
-方法流程
-1.排除词典
-建立“排除词典”，在词典内的不翻译。
-包括：
-词典以四级词汇及其变体为准。
-
-2.逐个单词读取文档
-读取单词的字符大小，后期标注的大小是这个大小的 0.8倍
-
-3.对非词典内的单词翻译
-1)去除单词前后的逗号、分号、括号等符号
-2)判断是否是英文单词
-3)查询字典
-
-4.将翻译的文字，标注在英文词汇下方
-
-5.*增加尺寸后（PyMuPDF），增加行距（可以使用pdfminer）
-
-6.*将增加的标注做为图层 layer
-
-7.保存的pdf命名为：以前名称+"_日期_YBT.pdf"
-
-"""
-# pip3 install pysqlite3
-# pip install selenium
-# pip install googletrans
-# pip install google_trans_new
-# pip install Beautifulsoup4
-# pip install lxml
-# pip install PyMuPDF
-# pip install pdf2image
-# pip install matplotlib
-# pip install pdfminer
 import os
 import shutil
 import time
@@ -257,8 +218,8 @@ def find_all_files(files_path):
     return files_names
 
 if __name__ == '__main__':
-    appid = '20160322000016298'
-    secretKey = 'Q6c605JuvTTteOuQJixV'
+    appid = '***由百度API填写***'
+    secretKey = '***由百度API填写***'
 
     Word_lists = []
     with open("EnglishWordlists\Highschool_edited.txt", "r") as f:  # 打开文件
@@ -284,7 +245,6 @@ if __name__ == '__main__':
 
 
     # 获取 文件夹下所有非翻译后的 pdf文件
-
     files_path = 'D:\\Desktop\\PET'  # 文件夹
     files_names = find_all_files(files_path)  # 获取所有文件路径名称
 
@@ -295,66 +255,3 @@ if __name__ == '__main__':
 
 
 
-
-"""
-from stardict import DictCsv
-
-    csvname = os.path.join(os.path.dirname(__file__), 'ecdict.csv')
-    dc = DictCsv(csvname)
-    # print(dc.match('kisshere', 10, True))
-    dc.commit()
-
-
-    if Trans_text=='对不起，没有完成翻译！':
-        trans_text_Line = dc.query(text).get('translation')
-        trans_text_s = trans_text_Line.splitlines()
-        trans_text_1 = trans_text_s[0]
-        trans_text_1_s = trans_text_1.split(". ")
-        if len(trans_text_1_s) == 2:
-            trans_text = trans_text_1_s[1]
-        else:
-            trans_text = trans_text_1_s
-        # print(trans_text)
-
-    
-if 0:
-    trans_tmp = dc.query(text)
-    if trans_tmp is not None :
-        trans_text_Line = trans_tmp.get('translation')
-        trans_text_s = trans_text_Line.splitlines()
-        trans_text_1 = trans_text_s[0]
-        trans_text_1_s = trans_text_1.split(". ")
-        if len(trans_text_1_s) == 2:
-            trans_text_1_s = trans_text_1_s[1]
-        else:
-            trans_text_1_s = trans_text_1_s
-
-        trans_text_1_s = trans_text_1_s.split(";")
-        trans_text_1_s = trans_text_1_s[0]
-        trans_text_1_s = trans_text_1_s.split("；")
-        trans_text_1_s = trans_text_1_s[0]
-        trans_text_1_s = trans_text_1_s.split(", ")
-        trans_text_1_s = trans_text_1_s[0]
-        trans_text_1_s = trans_text_1_s.split("（")
-        trans_text_1_s = trans_text_1_s[0]
-        trans_text_1_s = trans_text_1_s.split("(")
-        trans_text_1_s = trans_text_1_s[0]
-        Trans_text = trans_text_1_s
-    else:
-        Trans_text = ''
-
-else:
-    while 1:
-        from_lang = 'en'
-        to_lang = 'zh'
-        appid = '20160322000016298'
-        secretKey = 'Q6c605JuvTTteOuQJixV'
-        Trans_text = Transs.Transs.Translater(text, from_lang, to_lang, appid,
-                                              secretKey)
-        time.sleep(1)
-        if Trans_text == '对不起，没有完成翻译！':
-            time.sleep(0.5)
-        else:
-            break
-
-"""
