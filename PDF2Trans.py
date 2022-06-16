@@ -245,12 +245,11 @@ if __name__ == '__main__':
 
 
     # 获取 文件夹下所有非翻译后的 pdf文件
-    files_path = 'D:\\Desktop\\PET'  # 文件夹
+    files_path = '***********'  # 文件夹
     files_names = find_all_files(files_path)  # 获取所有文件路径名称
 
     for pdf_name in files_names:
         print(pdf_name)
-        # pdf_name = 'D:\\Desktop\\PET\\science.1235381.pdf'
         read_trans_note(pdf_name, Word_lists, Known_WordLists_EN, Known_WordLists_CN, appid, secretKey)
 
 
