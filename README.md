@@ -60,7 +60,9 @@ pip install pdfminer
 #### 2.运行程序
 python PDFWordTrans.py
 
+
 文档：我是pdf.pdf
+
 翻译后的文档：@#@\_我是pdf.pdf
 
 ### 效果
