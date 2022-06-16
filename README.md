@@ -16,11 +16,10 @@ Github: https://github.com/zyabo/PDFWordTrans
 ### 初衷
 **帮助 科研工作者 快速摆脱 专业英语 困扰**
 
-More big...
+More bigger......
 
 Ma体：**让天下没有难读的论文**
 
-More smalllll...
 我做了个自觉不错的小工具，不想落灰，希望帮助到大家
 
 ### 适合对象
